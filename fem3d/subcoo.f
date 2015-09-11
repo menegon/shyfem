@@ -54,8 +54,10 @@ c
 	do k=1,nnkn
 	  do m=-mmbw,mmbw
 	    n = iijp(m,k)
-	    jp(n) = k
-	    ip(n) = k + m
+	    if( n.ne.0 ) then
+	      jp(n) = k
+	      ip(n) = k + m
+	    end if
 	  end do
 	end do
 
